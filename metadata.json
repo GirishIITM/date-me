@@ -1,0 +1,8 @@
+{
+  "name": "date@me",
+  "description": "shows week day in kannada",
+  "uuid": "date@me",
+  "shell-version": [
+    "46"
+  ]
+}
