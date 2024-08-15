@@ -27,11 +27,6 @@ const Indicator = GObject.registerClass(
                 style_class: 'date-label'
             }));
 
-            let item = new PopupMenu.PopupMenuItem(_('Show Notification'));
-            item.connect('activate', () => {
-                Main.notify(_('Whatʼs up, folks?'));
-            });
-            this.menu.addMenuItem(item);
         }
     });
 
