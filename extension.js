@@ -36,13 +36,17 @@ const Indicator = GObject.registerClass(
     });
 
 export default class IndicatorExampleExtension extends Extension {
+    _indicator = null;
+
     enable() {
         this._indicator = new Indicator();
         Main.panel.addToStatusArea(this.uuid, this._indicator);
     }
 
     disable() {
-        this._indicator.destroy();
-        this._indicator = null;
+        if (this._indicator) {
+            this._indicator.destroy();
+            this._indicator = null;
+        }
     }
 }
